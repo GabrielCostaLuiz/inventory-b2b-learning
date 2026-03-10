@@ -1,0 +1,16 @@
+version: '3.8' # Versão do Docker Compose
+
+services:
+  db:
+    image: postgres:15-alpine # Versão leve do Postgres
+    container_name: inventory-b2b-db
+    restart: always # Reinicia o container automaticamente se cair
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data #O volume garante a persistência dos dados no seu disco rígido
+
+volumes:
+  postgres_data:

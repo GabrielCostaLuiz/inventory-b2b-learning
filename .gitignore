@@ -1,0 +1,16 @@
+# General Environment
+.env
+.env.*.local
+
+# Node modules
+node_modules/
+dist/
+coverage/
+
+# Documentação interna de tech lead (Não subir para o repo público)
+docs/
+
+# IDE e Ferramentas
+.vscode/
+.idea/
+*.log
